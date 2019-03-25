@@ -4,5 +4,9 @@
   "description": "HBS Boilerplate with Webpack",
   "main": "server.js",
   "author": "Theo Avoyne",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3"
+  }
 }
