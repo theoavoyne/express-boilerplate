@@ -5,8 +5,29 @@
   "main": "server.js",
   "author": "Theo Avoyne",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "build:dev": "webpack --env development",
+    "build:prod": "webpack --env production",
+    "dev-server": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js",
+    "heroku-postbuild": "yarn run build:prod"
+  },
   "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
     "express": "^4.16.4",
-    "hbs": "^4.0.3"
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "hbs": "^4.0.3",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "webpack-dev-middleware": "^3.6.1"
   }
 }
