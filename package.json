@@ -12,6 +12,9 @@
     "dev-server": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
+  "engines": {
+    "node": "11.10.0"
+  },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
