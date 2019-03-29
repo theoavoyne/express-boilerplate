@@ -9,7 +9,7 @@
     "start": "node server.js",
     "build:dev": "webpack --env development",
     "build:prod": "webpack --env production",
-    "dev-server": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js",
+    "dev-server": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js nodemon -e js,hbs",
     "heroku-postbuild": "yarn run build:prod"
   },
   "engines": {
@@ -23,6 +23,7 @@
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "hbs": "^4.0.3",
+    "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "sass-loader": "^7.1.0",

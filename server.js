@@ -4,6 +4,7 @@ const { PORT:port, NODE_ENV:env } = process.env;
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+var logger = require('morgan');
 
 const app = express();
 
@@ -13,11 +14,11 @@ if (env === 'development') {
 };
 
 // APP SETUP
+app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
-hbs.registerPartials(path.join(__dirname, 'views/partials'));
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 // ROUTES
 const homeRouter = require(path.join(__dirname, 'routes/homeRouter'));
