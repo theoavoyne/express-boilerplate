@@ -5,6 +5,8 @@ const config = require('./../webpack.config.js')('development');
 
 const compiler = webpack(config);
 
-module.exports = webpackDevMiddleware(compiler, {
-  publicPath: config.output.publicPath
-});
+module.exports = () => (
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath
+  })
+);

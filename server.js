@@ -14,7 +14,7 @@ const app = express();
 
 // WEBPACK DEV MIDDLEWARE
 if (env === 'development') {
-  app.use(webpackDevMiddleware);
+  app.use(webpackDevMiddleware());
 }
 
 // APP SETUP
