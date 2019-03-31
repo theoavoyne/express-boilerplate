@@ -1,7 +1,7 @@
 {
-  "name": "hbs-boilerplate",
+  "name": "express-boilerplate",
   "version": "1.0.0",
-  "description": "HBS Boilerplate with Webpack",
+  "description": "Express Boilerplate with HBS, Webpack, Babel and ESLint setup",
   "main": "server.js",
   "author": "Theo Avoyne",
   "license": "MIT",
