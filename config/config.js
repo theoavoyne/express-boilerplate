@@ -1,7 +1,11 @@
-const config = require('./config.json');
+const env = process.env.NODE_ENV;
 
-const envConfig = config[process.env.NODE_ENV];
+if (env === 'development') {
+  const config = require('./config.json');
 
-Object.keys(envConfig).forEach((key) => {
-  process.env[key] = envConfig[key];
-});
+  const envConfig = config[env];
+
+  Object.keys(envConfig).forEach((key) => {
+    process.env[key] = envConfig[key];
+  });
+}
