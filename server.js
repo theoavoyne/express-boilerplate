@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
 
   res.locals.message = err.message || 'Internal Server Error';
   res.locals.status = status;
-  res.locals.error = env === 'development' ? err : {};
+  res.locals.stack = env === 'development' ? err.stack : undefined;
 
   res.status(status);
   res.render('error');
